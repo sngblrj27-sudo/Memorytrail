@@ -1,0 +1,90 @@
+[
+  {
+    "id": "S1",
+    "title": "Why did they ruin Google Photos search?",
+    "url": "https://www.reddit.com/r/googlephotos/comments/1fvq7hr/why_did_they_ruin_google_photos_search/",
+    "type": "Reddit",
+    "published": "2024-10-04",
+    "note": "Thread includes later comments; individual comment dates are not normalized."
+  },
+  {
+    "id": "S2",
+    "title": "Google Photos removing search and replacing it with ask",
+    "url": "https://www.reddit.com/r/GooglePixel/comments/1qbdo8i/google_photos_removing_search_and_replacing_it/",
+    "type": "Reddit",
+    "published": "2026-01-13",
+    "note": "Self-reported user experience; not a product-wide measurement."
+  },
+  {
+    "id": "S3",
+    "title": "Classic Search is gone",
+    "url": "https://www.reddit.com/r/googlephotos/comments/1lklsk2/classic_search_is_gone/",
+    "type": "Reddit",
+    "published": "2025-06-26",
+    "note": "Historical user reports; current official documentation takes precedence for feature availability."
+  },
+  {
+    "id": "S4",
+    "title": "Ask HN: Why does Google Photos' search suck?",
+    "url": "https://news.ycombinator.com/item?id=44031190",
+    "type": "Hacker News",
+    "published": "2025-05-19",
+    "note": "Includes positive and negative reports in the same discussion."
+  },
+  {
+    "id": "S5",
+    "title": "Google Photos search to show only local photos",
+    "url": "https://android.stackexchange.com/questions/213108/google-photos-search-to-show-only-local-photos",
+    "type": "Stack Exchange",
+    "published": "",
+    "note": "Historical scoping question; date not normalized."
+  },
+  {
+    "id": "O1",
+    "title": "Use Ask Photos to search, edit and get assistance",
+    "url": "https://support.google.com/photos/answer/15318661?co=GENIE.Platform%3DAndroid&hl=en",
+    "type": "Official product baseline",
+    "published": "",
+    "note": "Natural-language search, follow-up questions, and a Remember List already exist."
+  },
+  {
+    "id": "O2",
+    "title": "Improvements to Ask Photos",
+    "url": "https://blog.google/products-and-platforms/products/photos/updates-ask-photos-search/",
+    "type": "Official product baseline",
+    "published": "2025-06-26",
+    "note": "Google describes combining fast classic results with background Gemini processing."
+  },
+  {
+    "id": "O3",
+    "title": "About the Google Photos APIs",
+    "url": "https://developers.google.com/photos/overview/about",
+    "type": "Official API documentation",
+    "published": "",
+    "note": "Picker selects user-authorized media; Library API manages app-created content. Prototype uses direct uploads instead."
+  },
+  {
+    "id": "O4",
+    "title": "Gemini structured outputs",
+    "url": "https://ai.google.dev/gemini-api/docs/structured-output",
+    "type": "Official API documentation",
+    "published": "",
+    "note": "Schema-constrained output still requires application-side validation."
+  },
+  {
+    "id": "O5",
+    "title": "Gemini image understanding",
+    "url": "https://ai.google.dev/gemini-api/docs/image-understanding",
+    "type": "Official API documentation",
+    "published": "",
+    "note": "Inline image input for opt-in captioning."
+  },
+  {
+    "id": "O6",
+    "title": "Gemini model catalog",
+    "url": "https://ai.google.dev/gemini-api/docs/models",
+    "type": "Official API documentation",
+    "published": "",
+    "note": "Model is configurable; sample default is gemini-2.5-flash."
+  }
+]

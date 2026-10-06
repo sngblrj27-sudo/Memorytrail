@@ -1,0 +1,1 @@
+{"name":"memorytrail-prototype","private":true,"version":"0.1.0","description":"Evidence-led photo retrieval research prototype. No third-party runtime dependencies.","engines":{"node":">=22"},"scripts":{"start": "node --env-file=.env server.js","test":"node --test test/*.test.js"}}

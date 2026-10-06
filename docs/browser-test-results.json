@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "checks": [
+    "Initial gallery: 12 synthetic cards",
+    "Certain visual clue outranks uncertain incorrect city",
+    "Reject and undo restore candidate eligibility",
+    "Seed event traversal shows same-moment candidates",
+    "Practice correctness checked against explicit target",
+    "Evidence filter keeps two counterevidence records",
+    "Offline evidence does not pretend to run AI",
+    "Outcomes explicitly labeled synthetic",
+    "Missing backend credentials cannot silently enable live AI",
+    "390px viewport: no horizontal overflow",
+    "No JavaScript page errors"
+  ],
+  "live_provider_tested": false,
+  "public_deployment_tested": false
+}

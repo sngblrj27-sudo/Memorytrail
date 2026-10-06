@@ -1,0 +1,221 @@
+[
+  {
+    "id": "p01",
+    "title": "The plant-filled cafe",
+    "place": "Goa",
+    "date": "2024-11-12",
+    "event": "Goa afternoon",
+    "scene": "cafe",
+    "color": "green",
+    "tags": [
+      "plants",
+      "window",
+      "coffee",
+      "table",
+      "indoor"
+    ],
+    "caption": "cafe with green visual accents; plants window coffee table indoor.",
+    "image": "assets/p01.svg",
+    "origin": "illustrated synthetic fixture"
+  },
+  {
+    "id": "p02",
+    "title": "Coffee by the window",
+    "place": "Goa",
+    "date": "2024-11-12",
+    "event": "Goa afternoon",
+    "scene": "coffee",
+    "color": "brown",
+    "tags": [
+      "cup",
+      "window",
+      "table",
+      "cafe",
+      "indoor"
+    ],
+    "caption": "coffee with brown visual accents; cup window table cafe indoor.",
+    "image": "assets/p02.svg",
+    "origin": "illustrated synthetic fixture"
+  },
+  {
+    "id": "p03",
+    "title": "The beach afterwards",
+    "place": "Goa",
+    "date": "2024-11-12",
+    "event": "Goa afternoon",
+    "scene": "beach",
+    "color": "blue",
+    "tags": [
+      "sand",
+      "ocean",
+      "palm",
+      "outdoor",
+      "sunset"
+    ],
+    "caption": "beach with blue visual accents; sand ocean palm outdoor sunset.",
+    "image": "assets/p03.svg",
+    "origin": "illustrated synthetic fixture"
+  },
+  {
+    "id": "p04",
+    "title": "A blue-chair cafe",
+    "place": "Mumbai",
+    "date": "2025-02-10",
+    "event": "Mumbai weekend",
+    "scene": "cafe",
+    "color": "blue",
+    "tags": [
+      "chairs",
+      "terrace",
+      "coffee",
+      "outdoor"
+    ],
+    "caption": "cafe with blue visual accents; chairs terrace coffee outdoor.",
+    "image": "assets/p04.svg",
+    "origin": "illustrated synthetic fixture"
+  },
+  {
+    "id": "p05",
+    "title": "A small corner cafe",
+    "place": "Paris",
+    "date": "2023-09-03",
+    "event": "Paris morning",
+    "scene": "cafe",
+    "color": "red",
+    "tags": [
+      "awning",
+      "street",
+      "outdoor",
+      "coffee"
+    ],
+    "caption": "cafe with red visual accents; awning street outdoor coffee.",
+    "image": "assets/p05.svg",
+    "origin": "illustrated synthetic fixture"
+  },
+  {
+    "id": "p06",
+    "title": "A rainy cafe stop",
+    "place": "Seattle",
+    "date": "2025-10-06",
+    "event": "Seattle rainy day",
+    "scene": "cafe",
+    "color": "green",
+    "tags": [
+      "plants",
+      "rain",
+      "window",
+      "indoor"
+    ],
+    "caption": "cafe with green visual accents; plants rain window indoor.",
+    "image": "assets/p06.svg",
+    "origin": "illustrated synthetic fixture"
+  },
+  {
+    "id": "p07",
+    "title": "Mountain trail",
+    "place": "Manali",
+    "date": "2024-06-21",
+    "event": "Mountain walk",
+    "scene": "mountain",
+    "color": "blue",
+    "tags": [
+      "hiking",
+      "snow",
+      "peak",
+      "outdoor"
+    ],
+    "caption": "mountain with blue visual accents; hiking snow peak outdoor.",
+    "image": "assets/p07.svg",
+    "origin": "illustrated synthetic fixture"
+  },
+  {
+    "id": "p08",
+    "title": "Lake on the trail",
+    "place": "Manali",
+    "date": "2024-06-21",
+    "event": "Mountain walk",
+    "scene": "lake",
+    "color": "blue",
+    "tags": [
+      "water",
+      "trees",
+      "mountains",
+      "outdoor"
+    ],
+    "caption": "lake with blue visual accents; water trees mountains outdoor.",
+    "image": "assets/p08.svg",
+    "origin": "illustrated synthetic fixture"
+  },
+  {
+    "id": "p09",
+    "title": "Sunset by the water",
+    "place": "Mumbai",
+    "date": "2025-02-10",
+    "event": "Mumbai weekend",
+    "scene": "beach",
+    "color": "orange",
+    "tags": [
+      "sunset",
+      "ocean",
+      "outdoor"
+    ],
+    "caption": "beach with orange visual accents; sunset ocean outdoor.",
+    "image": "assets/p09.svg",
+    "origin": "illustrated synthetic fixture"
+  },
+  {
+    "id": "p10",
+    "title": "Evening dinner",
+    "place": "Goa",
+    "date": "2024-11-13",
+    "event": "Goa dinner",
+    "scene": "restaurant",
+    "color": "orange",
+    "tags": [
+      "lights",
+      "tables",
+      "food",
+      "indoor"
+    ],
+    "caption": "restaurant with orange visual accents; lights tables food indoor.",
+    "image": "assets/p10.svg",
+    "origin": "illustrated synthetic fixture"
+  },
+  {
+    "id": "p11",
+    "title": "Forest break",
+    "place": "Seattle",
+    "date": "2025-05-01",
+    "event": "Forest walk",
+    "scene": "forest",
+    "color": "green",
+    "tags": [
+      "trees",
+      "trail",
+      "walking",
+      "outdoor"
+    ],
+    "caption": "forest with green visual accents; trees trail walking outdoor.",
+    "image": "assets/p11.svg",
+    "origin": "illustrated synthetic fixture"
+  },
+  {
+    "id": "p12",
+    "title": "Coffee at home",
+    "place": "Seattle",
+    "date": "2025-07-22",
+    "event": "Home morning",
+    "scene": "coffee",
+    "color": "brown",
+    "tags": [
+      "cup",
+      "table",
+      "home",
+      "kitchen",
+      "indoor"
+    ],
+    "caption": "coffee with brown visual accents; cup table home kitchen indoor.",
+    "image": "assets/p12.svg",
+    "origin": "illustrated synthetic fixture"
+  }
+]

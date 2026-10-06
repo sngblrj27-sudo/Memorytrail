@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "GET /api/health: 200; model not configured",
+    "GET /: 200",
+    "GET /core.js: 200",
+    "GET /assets/p01.svg: 200",
+    "POST /api/ai: 503 without provider credentials; no simulated live success",
+    "GET /api/ai: 405",
+    "Encoded traversal rejected; status 403"
+  ],
+  "passed": 7,
+  "live_provider_tested": false,
+  "public_deployment_tested": false
+}

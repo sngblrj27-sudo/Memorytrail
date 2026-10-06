@@ -1,0 +1,1 @@
+participant_id,condition_order,task_id,condition,dataset_type,ground_truth_id,declared_found_id,verified_correct,elapsed_seconds,within_120_seconds,clarification_count,reformulations,false_success,critical_issue,next_iteration

@@ -1,0 +1,146 @@
+
+> memorytrail-prototype@0.1.0 test
+> node --test test/*.test.js
+
+TAP version 13
+# Subtest: uncertain place remains maybe
+ok 1 - uncertain place remains maybe
+  ---
+  duration_ms: 3.548265
+  type: 'test'
+  ...
+# Subtest: matching certain visual clue outranks uncertain wrong city
+ok 2 - matching certain visual clue outranks uncertain wrong city
+  ---
+  duration_ms: 0.66732
+  type: 'test'
+  ...
+# Subtest: guesses do not remove unmatched photos
+ok 3 - guesses do not remove unmatched photos
+  ---
+  duration_ms: 9.123362
+  type: 'test'
+  ...
+# Subtest: explicit rejection removes an item
+ok 4 - explicit rejection removes an item
+  ---
+  duration_ms: 0.397198
+  type: 'test'
+  ...
+# Subtest: ignored clue contributes no score
+ok 5 - ignored clue contributes no score
+  ---
+  duration_ms: 0.172407
+  type: 'test'
+  ...
+# Subtest: no known target does not fabricate correctness
+ok 6 - no known target does not fabricate correctness
+  ---
+  duration_ms: 0.114368
+  type: 'test'
+  ...
+# Subtest: wrong synthetic target is false success
+ok 7 - wrong synthetic target is false success
+  ---
+  duration_ms: 0.156231
+  type: 'test'
+  ...
+# Subtest: correct synthetic target is verified
+ok 8 - correct synthetic target is verified
+  ---
+  duration_ms: 0.08034
+  type: 'test'
+  ...
+# Subtest: question derived from diverse available facets
+ok 9 - question derived from diverse available facets
+  ---
+  duration_ms: 0.604712
+  type: 'test'
+  ...
+# Subtest: duplicate evidence text removed
+ok 10 - duplicate evidence text removed
+  ---
+  duration_ms: 0.704853
+  type: 'test'
+  ...
+# Subtest: duplicate evidence IDs rejected
+ok 11 - duplicate evidence IDs rejected
+  ---
+  duration_ms: 0.6034
+  type: 'test'
+  ...
+# Subtest: javascript provenance URLs rejected
+ok 12 - javascript provenance URLs rejected
+  ---
+  duration_ms: 0.246784
+  type: 'test'
+  ...
+# Subtest: 500-record import limit enforced
+ok 13 - 500-record import limit enforced
+  ---
+  duration_ms: 0.105042
+  type: 'test'
+  ...
+# Subtest: fabricated quote rejected
+ok 14 - fabricated quote rejected
+  ---
+  duration_ms: 0.196555
+  type: 'test'
+  ...
+# Subtest: unknown source ID rejected
+ok 15 - unknown source ID rejected
+  ---
+  duration_ms: 0.157868
+  type: 'test'
+  ...
+# Subtest: valid quote preserves original URL and requires human review
+ok 16 - valid quote preserves original URL and requires human review
+  ---
+  duration_ms: 0.20656
+  type: 'test'
+  ...
+# Subtest: discovery batch capped at 20
+ok 17 - discovery batch capped at 20
+  ---
+  duration_ms: 0.225747
+  type: 'test'
+  ...
+# Subtest: unsupported image mime rejected
+ok 18 - unsupported image mime rejected
+  ---
+  duration_ms: 0.414206
+  type: 'test'
+  ...
+# Subtest: caption request uses inline image and schema
+ok 19 - caption request uses inline image and schema
+  ---
+  duration_ms: 0.209628
+  type: 'test'
+  ...
+# Subtest: ranking request bounds enforced
+ok 20 - ranking request bounds enforced
+  ---
+  duration_ms: 0.10065
+  type: 'test'
+  ...
+# Subtest: unknown provider operation rejected
+ok 21 - unknown provider operation rejected
+  ---
+  duration_ms: 0.067321
+  type: 'test'
+  ...
+# Subtest: provider JSON response parsed using a mock, not a live API
+ok 22 - provider JSON response parsed using a mock, not a live API
+  ---
+  duration_ms: 1.627342
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 102.860716

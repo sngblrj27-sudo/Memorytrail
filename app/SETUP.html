@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MemoryTrail — application setup</title><style>
+:root{color-scheme:light;--ink:#173b36;--muted:#64726a;--paper:#f6f5ee;--green:#1f6556;--line:#d6ded3}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.7}
+main{max-width:1040px;margin:0 auto;padding:54px 30px 80px}h1{font-size:clamp(32px,5vw,54px);line-height:1.15;letter-spacing:-1.7px}h2{margin-top:2.2em;line-height:1.3}h3{line-height:1.4}a{color:var(--green);text-underline-offset:3px}p,li{max-width:86ch}li{margin:.3em 0}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:800}.lede{font-size:21px;color:var(--muted)}.notice{background:#f4ebcf;border-left:5px solid #a17e2a;padding:20px 24px;border-radius:10px;margin:28px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{padding:24px;border-radius:18px;background:white;border:1px solid var(--line)}.card h3{margin:0 0 12px;font-size:23px}.card p{color:var(--muted);margin:0 0 18px}.button{display:inline-block;padding:9px 16px;border-radius:10px;background:var(--green);color:white;text-decoration:none;font-weight:700}.good{background:#e4eadc}.status{font-size:14px;font-weight:700;padding:5px 10px;border-radius:20px;display:inline-block;background:#e4eadc}pre{background:#183b36;color:#f6f5ee;padding:22px;border-radius:12px;overflow:auto;font-size:14px;line-height:1.6}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.92em}p code,li code{background:#e4eadc;border-radius:4px;padding:2px 4px}table{border-collapse:collapse;width:100%;margin:20px 0;font-size:15px}td,th{padding:12px;border:1px solid var(--line);vertical-align:top;text-align:left}th{background:#e4eadc}footer{border-top:1px solid var(--line);margin-top:48px;padding-top:20px;color:var(--muted);font-size:14px}blockquote{border-left:4px solid #b6c8b3;padding-left:20px;margin-left:0;color:#38564a}hr{border:0;border-top:1px solid var(--line);margin:32px 0}@media(max-width:640px){main{padding:28px 18px}.grid{grid-template-columns:1fr}h1{letter-spacing:-.8px}table{font-size:13px}td,th{padding:7px}}
+</style></head><body><main><h1>MemoryTrail application</h1>
+<p>Two experiences share one small application:</p>
+<ul>
+<li><strong>Find a memory:</strong> editable certain/maybe/ignore clues, ranked candidates, rejection/undo, event traversal, optional real-image captioning and AI reranking.</li>
+<li><strong>Evidence Lab:</strong> source-linked feedback import, deterministic deduplication, schema-constrained AI extraction, exact-quote validation, stage filtering, human-review flags and export.</li>
+</ul>
+<p>The third tab is a session/test log. Synthetic practice outcomes are explicitly separated from unverified real-photo selections.</p>
+<h2>What runs immediately</h2>
+<p>Open the separately supplied <code>MemoryTrail_Interactive_Demo.html</code> in a desktop browser. It has no runtime dependencies, no external image assets and no API calls in demo mode. It demonstrates interaction mechanics using 12 synthetic illustrations and a 12-record sourced research seed. It is <strong>not</strong> an AI photo-search benchmark or completed field research.</p>
+<h2>Run the application locally</h2>
+<p>Use Node.js 22 or later. No npm packages are required for the runtime.</p>
+<pre><code class="language-sh">cd app
+npm test
+npm start
+</code></pre>
+<p>Then open <code>http://127.0.0.1:3000</code> in a browser. A standalone HTML attachment is not a public deployment.</p>
+<h2>Enable actual AI</h2>
+<pre><code class="language-sh">cp .env.example .env
+</code></pre>
+<p>Edit <code>.env</code> locally to set <code>GEMINI_API_KEY</code> and optionally <code>GEMINI_MODEL</code>. The sample uses <code>gemini-2.5-flash</code>; select an available vision/structured-output-compatible model in your provider account. Restart <code>npm start</code>, open AI &amp; privacy settings, and enable live calls. Model access and usage charges are controlled by the provider account. Do not commit <code>.env</code>, send a model API key in a chat, or put it into frontend JavaScript.</p>
+<p>A separate <code>REVIEWER_TOKEN</code> can gate live calls. It is not a provider key; reviewers can enter it in the settings dialog. Keep it in browser memory only. Synthetic demo and seed evidence remain available without the token.</p>
+<p>The server supports four operations:</p>
+<ol>
+<li><code>parse</code>: turns the user’s stated memory into uncertainty-preserving clues.</li>
+<li><code>caption</code>: sends one resized, explicitly selected image to the vision model. Captions do not infer people’s identities, dates, locations or relationships.</li>
+<li><code>rank</code>: ranks only supplied photo IDs against the clues and captions, with guesses kept soft.</li>
+<li><code>discovery</code>: classifies up to 20 source-linked feedback records and provides exact evidence quotes.</li>
+</ol>
+<p>Quote checking verifies fidelity to the imported text, not the truth of the original source. Human review remains required. Image reasons are model interpretations, not objective confidence percentages.</p>
+<h2>Real-image workflow</h2>
+<p>Read the upload consent, enable live AI, and select up to 32 non-sensitive JPEG, PNG or WebP images. Each is resized in the browser and sent individually to the backend. A successful batch replaces the illustrated gallery. Images and captions remain in active browser memory only. Reload or “Clear private images” removes active app references; provider retention is separate.</p>
+<p>Open a real image and expand “Add metadata you actually know” to set an optional place, date or event label. Photos with the exact same <strong>user-supplied</strong> event label appear as nearby moments. The app does not infer an event from upload order and does not parse EXIF, integrate Google Photos, or automatically cluster a large personal library.</p>
+<h2>Evidence format</h2>
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;: &quot;R101&quot;,
+    &quot;text&quot;: &quot;An exact excerpt you have permission to analyze&quot;,
+    &quot;source_url&quot;: &quot;https://example.org/original-discussion&quot;,
+    &quot;source_type&quot;: &quot;Public forum&quot;,
+    &quot;source_date&quot;: &quot;2026-09-21&quot;
+  }
+]
+</code></pre>
+<p>This is a schema example, not real evidence. Replace the URL and text with actual sources. Imports support 1–500 records, up to 5,000 characters each, and a 3 MB file. Duplicate IDs are rejected; normalized exact-text duplicates are removed. The live extraction runs in batches of 20 and replaces the prior corpus only when the whole run validates. Semantic duplicate detection, automated scraping, and model-driven cross-cluster prioritization are future work; the current UI compares stage groups and exposes evidence for human prioritization.</p>
+<h2>Publish</h2>
+<p>The application includes <code>vercel.json</code> and Node-style API functions for a <strong>Vercel deployment scaffold</strong>. Live hosting was not tested in this environment. Use the <code>app</code> folder as the project root, select an appropriate no-framework configuration, and configure server-side environment variables. Check that <code>/</code>, <code>/api/health</code>, <code>/api/ai</code>, the JavaScript files, and <code>/assets/p01.svg</code> route correctly after deployment. Adjust host routing to the platform’s current settings if needed. Do not label deployment successful until those checks pass on the public URL.</p>
+<p>For a small reviewer pilot, set <code>REVIEWER_TOKEN</code>. In a Vercel environment, model calls fail closed unless that token exists or <code>ALLOW_PUBLIC_AI=true</code> is explicitly set. The included in-memory limiter is per instance, not a distributed global quota. Before removing the token for anonymous traffic, set provider spending limits and hosting-level abuse controls. Choose a host plan compatible with 60-second functions or lower the timeout. Cost, quota and platform requirements must be checked in the account before publishing.</p>
+<p>The discovery and MVP are two tabs at the same origin; publish both and link to them explicitly in the final deck. Add URL hashes only if you implement hash routing; the current tabs do not provide separate deep links.</p>
+<h2>Validation status</h2>
+<ul>
+<li>22 automated unit tests passed for deterministic ranking, evidence validation, bounds and mocked provider output.</li>
+<li>Browser flow checks passed on an embedded standalone rendering, including 390px responsive layout. They were not tests of a live hosted origin.</li>
+<li>Local HTTP endpoints are separately smoke-tested without model credentials where recorded in <code>docs</code>.</li>
+<li>Actual model calls, real photographic accuracy, public hosting, account permissions, production security and participant usability were <strong>not</strong> validated.</li>
+</ul>
+<p>Tests are diagnostic checks, not a guarantee of correctness or security. See <code>../docs</code> for the actual captured test reports.</p>
+<h2>Primary technical references</h2>
+<ul>
+<li>Google Photos capabilities: <a href="https://support.google.com/photos/answer/15318661?co=GENIE.Platform%3DAndroid&amp;hl=en">https://support.google.com/photos/answer/15318661?co=GENIE.Platform%3DAndroid&amp;hl=en</a></li>
+<li>Google Photos APIs: <a href="https://developers.google.com/photos/overview/about">https://developers.google.com/photos/overview/about</a></li>
+<li>Gemini structured output: <a href="https://ai.google.dev/gemini-api/docs/structured-output">https://ai.google.dev/gemini-api/docs/structured-output</a></li>
+<li>Gemini image input: <a href="https://ai.google.dev/gemini-api/docs/image-understanding">https://ai.google.dev/gemini-api/docs/image-understanding</a></li>
+<li>Configurable models: <a href="https://ai.google.dev/gemini-api/docs/models">https://ai.google.dev/gemini-api/docs/models</a></li>
+</ul>
+<h2>Known limits</h2>
+<p>This is a research prototype, not a production service. There is no user account isolation across a shared browser session, durable database, distributed rate limiter, provider deletion API, automatic metadata extraction, embedding index or unrestricted library connector. The browser holds at most 32 selected images, and live ranking may omit weaker candidates from the top 12 while the gallery retains them. No camera roll is read without explicit file selection. Failures are displayed; the app does not silently substitute fake AI results.</p>
+</main></body></html>
